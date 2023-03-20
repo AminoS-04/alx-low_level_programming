@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  *main - Entry point
  *Description: 'Print number of base 10 using putchar'
  *Return: Always 0
