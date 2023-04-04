@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdio.h>
+#include "string_functions.h"
+
 
 /**
  * main - check the code
