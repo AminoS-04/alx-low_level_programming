@@ -1,18 +1,19 @@
 #include "main.h"
 
 /**
- * _islower - check the code for Holberton School students.
- *
- * @c:  is a parameter
- *
- * Return: Always 0.
+ * _islower - Entry point
+ * @c: The interget value
+ * Return: 1 if true, 0 if false
  */
 
 int _islower(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }

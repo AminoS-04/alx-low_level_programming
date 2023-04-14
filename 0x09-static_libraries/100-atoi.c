@@ -1,29 +1,29 @@
 #include "main.h"
+
 /**
- * _atoi - int
- * @s: pointer
- * Return: int.
+ * _atoi - Entry point
+ * Description: Convert String to Integer
+ * @s: Integer
+ * Return: char
  */
+
 int _atoi(char *s)
 {
-	int i;
-	int res = 0;
-	int sig = -1;
-	int brk = 0;
+	int sign = 1;
+	unsigned int ans = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s != '\0' && (*s < '0' || *s > '9'))
 	{
-		if (s[i] == '-')
-			sig = sig * -1;
-		if (s[i] >= '0' && s[i] <= '9')
+		if (*s == '-')
 		{
-			res = res * 10;
-			res -= (s[i] - '0');
-			brk = 1;
+			sign *= -1;
 		}
-		else if (brk == 1)
-			break;
+		s++;
 	}
-	res = sig * res;
-	return (res);
+	while (*s >= '0' && *s <= '9')
+	{
+		ans = ans * 10 + (*s - '0');
+		s++;
+	}
+	return (sign * ans);
 }

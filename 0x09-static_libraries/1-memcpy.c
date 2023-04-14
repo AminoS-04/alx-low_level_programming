@@ -1,16 +1,21 @@
 #include "main.h"
 
 /**
- * _isdigit - check the code for Holberton School students.
- *
- * @c: is an integer param
- *
- * Return: Always 0.
+ * *_memcpy - Entry point
+ * Description: Copies memory area
+ * @dest: Character
+ * @src: Character
+ * @n: Integer
+ * Return: char
  */
 
-
-int _isdigit(int c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
+	char *ans = dest;
 
-	return (c >= 48 && c <= 57);
+	while (n--)
+	{
+		*dest++ = *src++;
+	}
+	return (ans);
 }
